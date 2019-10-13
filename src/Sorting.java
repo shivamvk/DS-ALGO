@@ -50,7 +50,17 @@ public class Sorting {
                j++;
                k++;
            }
-
+            while (i<left.length){
+            a[k]=left[i];
+            i++;
+            k++;
+        }
+        while (j<right.length){
+            a[k]=right[j];
+            j++;
+            k++;
+        }
+        return a;
 
 
         }
