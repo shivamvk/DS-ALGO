@@ -24,6 +24,19 @@ public class Sorting {
     static void display(int a[]){
         System.out.print(Arrays.toString(a));
     }
+    
+    static int[] mergeSort(int a[],int first,int last){
+        if(first==last){
+            int arr[] = new int[1];
+            arr[0] = a[first];
+            return arr;
+        }
+        int mid = (first+last)/2;
+        int left[]=mergeSort(a,first,mid);
+        int right[]=mergeSort(a,mid+1,last);
+
+        return merge(left,right);
+    }
 
     static void insertionSort(int a[]){
         for(int i=1;i<a.length;i++){
