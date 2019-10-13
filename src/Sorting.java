@@ -37,6 +37,24 @@ public class Sorting {
 
         return merge(left,right);
     }
+    private static int[] merge(int[] left, int[] right) {
+        int a[]=new int[left.length+right.length];
+        int i=0,j=0,k=0;
+        while(i<left.length && j<right.length){
+           if(left[i]<=right[j]){
+               a[k]=left[i];
+               i++;
+               k++;
+           }else {
+               a[k]=right[j];
+               j++;
+               k++;
+           }
+
+
+
+        }
+    }
 
     static void insertionSort(int a[]){
         for(int i=1;i<a.length;i++){
